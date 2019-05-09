@@ -26,26 +26,29 @@ reset = document.getElementById("reset");
 
 
 const checaVitoria = function () {
-    switch (valor_objetivo){
+    switch (valor_objetivo) {
         case score_player1:
-        placar_player1.classList.toggle("text-success");
-        jogo_ativo = false;
-        break;
+            placar_player1.classList.toggle("text-success");
+            jogo_ativo = false;
+            break;
 
         case score_player2:
-        placar_player2.classList.toggle("text-success");
-        jogo_ativo = false;
-        break;
+            placar_player2.classList.toggle("text-success");
+            jogo_ativo = false;
+            break;
 
         case score_player3:
-        placar_player3.classList.toggle("text-success");
-        jogo_ativo = false;
-        break;
+            placar_player3.classList.toggle("text-success");
+            jogo_ativo = false;
+            break;
 
         case score_player4:
-        placar_player4.classList.toggle("text-success");
-        jogo_ativo = false;
-        break;
+            placar_player4.classList.toggle("text-success");
+            jogo_ativo = false;
+            break;
+
+        default:
+            break;
     }
 }
 
@@ -72,7 +75,7 @@ const atualizarPlacarPlayer4 = function () {
 form_botao.addEventListener("click", function () {
     if (jogo_ativo) {
         if (objetivo_form.value != "" && objetivo_form.value != 0) {
-            valor_objetivo = objetivo_form.value;
+            valor_objetivo = Number(objetivo_form.value);
             objetivo.innerText = valor_objetivo;
         }
     }
@@ -138,6 +141,9 @@ adicionar_jogador.addEventListener("click", function () {
             adicionar_jogador.classList.toggle("d-none");
             num_players++;
             break;
+
+        default:
+            break;
     }
 });
 
@@ -156,6 +162,9 @@ remover_jogador.addEventListener("click", function () {
             placar_player3.classList.toggle("d-none")
             remover_jogador.classList.toggle("d-none");
             num_players--;
+            break;
+
+        default:
             break;
     }
 });
