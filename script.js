@@ -20,9 +20,9 @@ let form_botao = document.getElementById("form_botao"),
     num_players = 2,
 
     jogo_ativo = true,
-    adicionar_jogador = document.getElementById("adicionar_jogador");
-remover_jogador = document.getElementById("remover_jogador");
-reset = document.getElementById("reset");
+    adicionar_jogador = document.getElementById("adicionar_jogador"),
+    remover_jogador = document.getElementById("remover_jogador"),
+    reset = document.getElementById("reset");
 
 
 const checaVitoria = function () {
@@ -133,12 +133,12 @@ adicionar_jogador.addEventListener("click", function () {
             remover_jogador.classList.toggle("d-none");
             num_players++;
             break;
-
-        case 3:
+            
+            case 3:
             player4_botao.classList.toggle("d-none");
             placar_player4.classList.toggle("d-none");
-            span3.classList.toggle("d-none");
             adicionar_jogador.classList.toggle("d-none");
+            span3.classList.toggle("d-none");
             num_players++;
             break;
 
@@ -152,14 +152,14 @@ remover_jogador.addEventListener("click", function () {
         case 4:
             player4_botao.classList.toggle("d-none");
             placar_player4.classList.toggle("d-none");
+            span3.classList.toggle("d-none");
             adicionar_jogador.classList.toggle("d-none");
-            span3.classList.toggle("d-none")
             num_players--;
             break;
 
         case 3:
             player3_botao.classList.toggle("d-none");
-            placar_player3.classList.toggle("d-none")
+            placar_player3.classList.toggle("d-none");
             remover_jogador.classList.toggle("d-none");
             num_players--;
             break;
