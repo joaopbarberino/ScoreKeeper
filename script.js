@@ -127,6 +127,7 @@ adicionar_jogador.addEventListener("click", function () {
         case 2:
             player3_botao.classList.toggle("d-none");
             placar_player3.classList.toggle("d-none");
+            remover_jogador.classList.toggle("d-none");
             num_players++;
             break;
 
@@ -153,6 +154,7 @@ remover_jogador.addEventListener("click", function () {
         case 3:
             player3_botao.classList.toggle("d-none");
             placar_player3.classList.toggle("d-none")
+            remover_jogador.classList.toggle("d-none");
             num_players--;
             break;
     }
