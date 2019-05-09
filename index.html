@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Score keeper</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script defer src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script defer src="script.js"></script>
+</head>
+
+<body class="bg-dark text-light">
+    <div class="container text-center">
+        <h1 class="display-4">Score Keeper</h1>
+        <div class="mt-5 input-group mb-3">
+            <input id="objetivo_form" type="number" class="form-control" min="1"
+                placeholder="Jogando até quantos pontos?" aria-label="objetivo_input" aria-describedby="objetivo_input">
+            <div class="input-group-append">
+                <button class="btn btn-warning" type="button" id="form_botao">Alterar</button>
+            </div>
+        </div>
+        <div>
+            <h1 class="display-4">Placar:</h1>
+            <span id="score_player1" class="display-1 mr-2">0</span>
+            <span class="display-1">-</span>
+            <span id="score_player2" class="display-1 ml-2">0</span>
+        </div>
+        <div>
+            <span id="score_player3" class="display-1 mr-2 d-none">0</span>
+            <span id="span3" class="display-1 d-none">-</span>
+            <span id="score_player4" class="display-1 ml-2 d-none">0</span>
+        </div>
+        <div class="">
+            <p>Jogando até <span id="objetivo">5</span> pontos</p>
+        </div>
+        <div class="d-flex">
+            <button id="player1_marcou" class="btn btn-success p-5 w-50 mr-1">Jogador 1 marcou</button>
+            <button id="player2_marcou" class="btn btn-success p-5 w-50 ml-1">Jogador 2 marcou</button>
+        </div>
+        <div class="d-flex mt-2">
+            <button id="player3_marcou" class="btn btn-success p-5 w-100 mr-1 d-none">Jogador 3 marcou</button>
+            <button id="player4_marcou" class="btn btn-success p-5 w-100 ml-1 d-none">Jogador 4 marcou</button>
+        </div>
+        <button id ="adicionar_jogador" class="btn btn-success mt-2 w-100">Adicionar Jogador</button>
+        <button id ="remover_jogador" class="btn btn-danger mt-2 w-100">Remover Jogador</button>
+        <button id="reset" class="btn btn-danger mt-2 w-100">Reiniciar Placar</button>
+
+    </div>
+</body>
+
+</html>
